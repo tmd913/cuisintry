@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+        var accessToken = 'BQDYSD8TSlKAUaM26TYvOiZCpG5CCGroidptA2SxDVMoscR5it9NmRY1iNym6b15yGEQ0lccW5qARyPDv_2ZYywKDrl7R4e6zW4vjJVLmf7nR8SnrwoPndHPbiR3J53uKJjegz2Ps47xhiaCN1uTfSJy8tZTPMXVeQ';
+
+        $.ajax({
+            // url: 'https://api.spotify.com/v1/me',
+            url: 'https://api.spotify.com/v1/search?q=skrillex&type=track%2Cartist&market=US&limit=10&offset=0',
+            headers: {
+                'Authorization': 'Bearer ' + accessToken
+            },
+            success: function (response) {
+                console.log(response);
+            }
+        })
+    </script>
+</body>
+
+</html>
