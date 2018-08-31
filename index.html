@@ -5,52 +5,64 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <title>Project 0</title>
-    
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="/assets/style.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="scripts.js"></script>
 </head>
 
 <body>
+    <!--NavBar with Logo -->
     <nav>
-        <div class="nav-wrapper">
-          <a href="#!" class="brand-logo left">Project 0</a>
-                    <!-- Possible code to add social media link icons -->
-          <!-- <ul class="right hide-on-med-and-down">
-            <li><a href="sass.html"><i class="material-icons left">search</i>Link with Left Icon</a></li>
-            <li><a href="badges.html"><i class="material-icons right">view_module</i>Link with Right Icon</a></li>
-          </ul> -->
+        <div class="nav-wrapper teal">
+            <a href="#Link to About Page w/ Instructions?" class="brand-logo left">Project 0</a>
         </div>
-      </nav>
-      <div class="parallax-container">
-        <div class="parallax"><img src="images/parallax1.jpg"></div>
-      </div>
-      <div class="section white">
-        <div class="row container">
-          <h2 class="header">Parallax</h2>
-          <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+    </nav>
+    
+    <!-- Parallax Container with Video and Form -->
+    <div class="parallax-container">
+        <div class="valign-wrapper">
+            <div class="row overlay center-align" id="searchArea">
+                <form class="pure-form">
+                    <input type="text" id="countrySearch" class="pure-input-rounded" placeholder="Input Country Name Here">
+                    <input type="text" id="restaurantSearch" class="pure-input-rounded" placeholder="Zip Code">
+                    <a class="waves-effect waves-light btn">Search</a>
+                </form>
+            </div>
+            <div class="parallax">
+                <video autoplay muted loop id="myVideo">
+                    <source src="assets/VideoFootageOfCity.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
-      </div>
-      <div class="parallax-container">
-        <div class="parallax"><img src="images/parallax2.jpg"></div>
-      </div>
+    </div>
 
-<!-- The video -->
-<video autoplay muted loop id="myVideo">
-    <source src="rain.mp4" type="video/mp4">
-  </video>
-  
-  <!-- Optional: some overlay text to describe the video -->
-  <div class="content">
-    <h1>Heading</h1>
-    <p>Lorem ipsum...</p>
-    <!-- Use a button to pause/play the video with JavaScript -->
-    <!-- <button id="myBtn" onclick="myFunction()">Pause</button> -->
-  </div>
+    <!-- Results Area for the Zomato and Country API call -->
+    <div class="row container" id="resultsArea">
+        <div class="col s6" id="countryResults">
+            <p>placeholder Results for the country API call here."Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+        <div class="col s6" id="restaurantResults">
+            <p>placeholder Results for the Zomato API call here."Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+    </div>
+
+
 </body>
 
 </html>
