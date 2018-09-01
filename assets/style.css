@@ -11,6 +11,19 @@
     margin-top: 50px;
 }
 
-#resultsArea{
+/* #resultsArea{
     
+} */
+
+.picture-container {
+    text-align: center;
+}
+
+.pictures div {
+    display: inline-block;
+    margin: 10px;
+}
+
+.pictures div a {
+    display: block;
 }

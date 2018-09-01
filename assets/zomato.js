@@ -24,6 +24,10 @@ const places = [];
 
 $("#searchButton").on("click", event => {
     event.preventDefault();
+    $(".picture-container").css("height", "800px");
+    $('html, body').animate({
+        scrollTop: $(".picture-container").offset().top
+      }, 1000);
     $(".pictures").empty();
     let country = $("#countrySearch").val().trim();
     for (let i = 1; i < 6; i++) {
@@ -50,8 +54,8 @@ $("#searchButton").on("click", event => {
                                 let slideImg = $(response2).find(".slideshow__slide")[0].style.backgroundImage;
                                 let div = $("<div>");
                                 div.append($("<a>").attr({ "href": `https://www.lonelyplanet.com/${link}`, target: "_blank" }).text(title));
+                                div.append($("<img>").attr({ "src": slideImg.substring(5, slideImg.length - 2), "height": "162px", "width": "250px" }));
                                 $(".pictures").append(div);
-                                $(".pictures").append($("<img>").attr({ "src": slideImg.substring(5, slideImg.length - 2), "height": "333px", "width": "500px" }));
                             }
                         });
                     }
