@@ -4,3 +4,34 @@
     margin-top: 50px;
 }
 
+img {
+    height: 400px;
+    width: 700px;
+}
+
+.container {
+    position: relative !important;
+    margin: 0 auto !important;
+    width: 700px !important;
+    font-size: 15px;
+    padding: 20px;
+    outline-color: deepskyblue;
+    outline-style: solid;
+    text-align: justify;
+    background-color: rgb(189, 186, 186);
+}
+
+.wrapper {
+    font-size: 18px;
+    color: white;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#movie-form {
+    text-align: center;
+}

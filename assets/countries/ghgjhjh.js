@@ -22,29 +22,29 @@ function displayCountries() {
             console.log(response);
 
             var name = response[0].name;
-            var flag = $("<img>").attr("src", response[0].flag); // --> REVISAR!!!!
-            var capital = response[0].capital;
-            var region = response[0].region;
-            var subregion = response[0].subregion
-            var population = response[0].population;
+            var flag = $("<img>").attr("src", response[0].flag);
+        
             var nativeName = response[0].nativeName;
-            var currencies = response[0].currencies[0].name;
-            var languages = response[0].languages[0].nativeName;
+           
 
-            // var imgURL = response[0].flag;
-            // var flag = $("<img>").attr("src", imgURL);
+            $("#countries-view").empty();
+
+            $(".name").text("Name: " + response[0].name);
+            $(".capital").text("Capital: " + response[0].capital);
+            $(".region").text("Region: " + response[0].region);
+            $(".population").text("Population: " + response[0].population);
+            $(".nativeName").text("Native name: " + response[0].nativeName);
+            $(".currencies").text("Currency: " + response[0].currencies[0].name);
+            $(".languages").text("Languages: " + response[0].languages[0].nativeName);
 
             console.log(name);
-            console.log(subregion);
             console.log(nativeName);
             console.log(response[0].flag);
 
-            $("#countries-view").empty();
-            $("#countries-view").append(name + flag + capital + region + subregion + population + nativeName + currencies + languages);
+            
             $("#countries-view").append(flag);
 
         });
-
     
 
 }
