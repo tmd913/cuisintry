@@ -1,68 +1,4 @@
-let accessToken = '6816158a6fbe7ceacf3a9617a5853775';
-
-// $.ajax({
-//     url: 'https://developers.zomato.com/api/v2.1/cities?q=washington',
-//     headers: {
-//         'user-key': accessToken,
-//     },
-//     success: response => {
-//         console.log(response);
-//     }
-// })
-
-// var country = "england";
-
-// $.get('https://www.lonelyplanet.com/' + country, function(response) {
-//     // console.log(response);
-//     var slideImg = $(response).find(".slideshow__slide")[0].style.backgroundImage;
-//     console.log(slideImg.substring(5, slideImg.length - 2));
-//     $("#resultsArea").append($("<img>").attr("src", slideImg.substring(5, slideImg.length - 2)));
-// });
-
-const places = [];
-
-$("#searchButton").on("click", event => {
-    event.preventDefault();
-    $(".picture-container").css("height", "800px");
-    $('html, body').animate({
-        scrollTop: $(".picture-container").offset().top
-      }, 1000);
-    $(".pictures").empty();
-    let country = $("#countrySearch").val().trim();
-    for (let i = 1; i < 6; i++) {
-        $.get(`https://www.lonelyplanet.com/${country}/places?page=${i}`, response => {
-            let placeLink = $(response).find(".card__mask > a");
-
-            for (const key in placeLink) {
-                if (placeLink.hasOwnProperty(key)) {
-                    const element = placeLink[key];
-                    if ($(element).attr("href") != undefined) {
-                        let link = $(element).attr("href")
-                        let linkLength = link.length;
-                        let linkPlace;
-                        for (let j = linkLength - 1; j >= 0; j--) {
-                            if (link[j] == '/') {
-                                linkPlace = link.substring(j + 1);
-                                places.push(linkPlace);
-                                break;
-                            }
-                        }
-                        $.get(`https://www.lonelyplanet.com/${link}`, response2 => {
-                            if ($(response2).find(".slideshow__slide")[0] != undefined) {
-                                let title = $(response2).find(".masthead__title")[0].innerText;
-                                let slideImg = $(response2).find(".slideshow__slide")[0].style.backgroundImage;
-                                let div = $("<div>");
-                                div.append($("<a>").attr({ "href": `https://www.lonelyplanet.com/${link}`, target: "_blank" }).text(title));
-                                div.append($("<img>").attr({ "src": slideImg.substring(5, slideImg.length - 2), "height": "162px", "width": "250px" }));
-                                $(".pictures").append(div);
-                            }
-                        });
-                    }
-                }
-            }
-        });
-    }
-})
+// 'https://www.foodnetwork.com/search/malaysian-/CUSTOM_FACET:RECIPE_FACET'
 
 // city ids 
 // https://www.washingtonpost.com/sf/style/2015/12/21/the-10-best-food-cities-in-america-ranked/?noredirect=on&utm_term=.815a7512e441
@@ -106,6 +42,8 @@ $("#searchButton").on("click", event => {
     phoenix:     301 
 */
 
+let accessToken = '6816158a6fbe7ceacf3a9617a5853775';
+
 const cityIDs = [280,306,279,281,292,286,1105,90,287,283,61,89,259,51,294,289,260,256,300,288,282,302,787,334,277,68,291,601,295,296,298,303,305,285,70,301];
 let cuisineIDs = {};
 
@@ -131,6 +69,51 @@ cityIDs.forEach(element => {
     });
 });
 
+// const places = [];
+
+// $("#searchButton").on("click", event => {
+//     event.preventDefault();
+//     $(".picture-container").css("height", "800px");
+//     $('html, body').animate({
+//         scrollTop: $(".picture-container").offset().top
+//       }, 1000);
+//     $(".pictures").empty();
+//     let country = $("#countrySearch").val().trim();
+//     for (let i = 1; i < 6; i++) {
+//         $.get(`https://www.lonelyplanet.com/${country}/places?page=${i}`, response => {
+//             let placeLink = $(response).find(".card__mask > a");
+
+//             for (const key in placeLink) {
+//                 if (placeLink.hasOwnProperty(key)) {
+//                     const element = placeLink[key];
+//                     if ($(element).attr("href") != undefined) {
+//                         let link = $(element).attr("href")
+//                         let linkLength = link.length;
+//                         let linkPlace;
+//                         for (let j = linkLength - 1; j >= 0; j--) {
+//                             if (link[j] == '/') {
+//                                 linkPlace = link.substring(j + 1);
+//                                 places.push(linkPlace);
+//                                 break;
+//                             }
+//                         }
+//                         $.get(`https://www.lonelyplanet.com/${link}`, response2 => {
+//                             if ($(response2).find(".slideshow__slide")[0] != undefined) {
+//                                 let title = $(response2).find(".masthead__title")[0].innerText;
+//                                 let slideImg = $(response2).find(".slideshow__slide")[0].style.backgroundImage;
+//                                 let div = $("<div>");
+//                                 div.append($("<a>").attr({ "href": `https://www.lonelyplanet.com/${link}`, target: "_blank" }).text(title));
+//                                 div.append($("<img>").attr({ "src": slideImg.substring(5, slideImg.length - 2), "height": "162px", "width": "250px" }));
+//                                 $(".pictures").append(div);
+//                             }
+//                         });
+//                     }
+//                 }
+//             }
+//         });
+//     }
+// })
+
 $.getJSON("https://raw.githubusercontent.com/tmd913/project0/tom/assets/country_cuisine_id_lu.json", json => {
     console.log(json);
 });
@@ -138,6 +121,89 @@ $.getJSON("https://raw.githubusercontent.com/tmd913/project0/tom/assets/country_
 $.getJSON("https://raw.githubusercontent.com/tmd913/project0/tom/assets/us_zip_to_lat_long_lu.json", json => {
     console.log(json["20036"]);
 });
+
+$.ajax({
+    url: 'https://developers.zomato.com/api/v2.1/cities?q=washington',
+    headers: {
+        'user-key': accessToken,
+    },
+    success: response => {
+        console.log(response);
+    }
+})
+
+// cityIDs.forEach(element => {
+//     $.ajax({
+//         url: `https://developers.zomato.com/api/v2.1/cuisines?city_id=${element}`,
+//         headers: {
+//             'user-key': accessToken,
+//         },
+//         success: response => {
+//             // console.log(response);
+//             // console.log(response.cuisines[120]);
+//             for (const key in response.cuisines) {
+//                 if (response.cuisines.hasOwnProperty(key)) {
+//                     const element = response.cuisines[key].cuisine;
+//                     // console.log(element);
+//                     if (!(element.cuisine_name in cuisineIDs)) {
+//                         cuisineIDs[element.cuisine_name] = element.cuisine_id;
+//                     }
+//                 }
+//             }
+//         }
+//     });
+// });
+
+$("#searchButton").on("click", event => {
+    event.preventDefault();
+    // $(".picture-container").css("height", "800px");
+    // $('html, body').animate({
+    //     scrollTop: $(".picture-container").offset().top
+    //   }, 1000);
+    // $(".pictures").empty();
+    let country = $("#countrySearch").val().trim();
+    let cuisineID;
+    $.getJSON("https://raw.githubusercontent.com/tmd913/project0/tom/assets/country_cuisine_id_lu.json", json => {
+        console.log(json[country]);
+        // cuisineID = json[country].CUISINE_ID;
+    });
+    console.log(cuisineID);
+    // for (let i = 1; i < 6; i++) {
+    //     $.get(`https://www.lonelyplanet.com/${country}/places?page=${i}`, response => {
+    //         let placeLink = $(response).find(".card__mask > a");
+
+    //         for (const key in placeLink) {
+    //             if (placeLink.hasOwnProperty(key)) {
+    //                 const element = placeLink[key];
+    //                 if ($(element).attr("href") != undefined) {
+    //                     let link = $(element).attr("href")
+    //                     let linkLength = link.length;
+    //                     let linkPlace;
+    //                     for (let j = linkLength - 1; j >= 0; j--) {
+    //                         if (link[j] == '/') {
+    //                             linkPlace = link.substring(j + 1);
+    //                             places.push(linkPlace);
+    //                             break;
+    //                         }
+    //                     }
+    //                     $.get(`https://www.lonelyplanet.com/${link}`, response2 => {
+    //                         if ($(response2).find(".slideshow__slide")[0] != undefined) {
+    //                             let title = $(response2).find(".masthead__title")[0].innerText;
+    //                             let slideImg = $(response2).find(".slideshow__slide")[0].style.backgroundImage;
+    //                             let div = $("<div>");
+    //                             div.append($("<a>").attr({ "href": `https://www.lonelyplanet.com/${link}`, target: "_blank" }).text(title));
+    //                             div.append($("<img>").attr({ "src": slideImg.substring(5, slideImg.length - 2), "height": "162px", "width": "250px" }));
+    //                             $(".pictures").append(div);
+    //                         }
+    //                     });
+    //                 }
+    //             }
+    //         }
+    //     });
+    // }
+})
+
+
 
 
 

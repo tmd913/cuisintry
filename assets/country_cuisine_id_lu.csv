@@ -1,99 +1,99 @@
 COUNTRY,ADJ_FORM,CUISINE_ID
-Afghanistan,Afghan,1035
-Algeria,Algerian,945
-Armenia,Armenian,175
-Australia,Australian,131
-Austria,Austrian,201
-Azerbaijan,Azerbaijani,581
-Bangladesh,Bengali,10
-Belgium,Belgian,132
-Brazil,Brazilian,159
-Britain,British,133
-Burma,Burmese,22
-Cambodia,Cambodian,111
-Canada,Canadian,381
-Chile,Chilean,229
-China,Chinese,25
-Colombia,Colombian,287
-Croatia,Croatian,982
-Cuba,Cuban,153
-Cyprus,Cypriot,947
-Czech Republic,Czech,671
-Denmark,Danish,203
-Dominica,Dominican,958
-Dominican Republic,Dominican,958
-Ecuador,Ecuadorian,316
-Egypt,Egyptian,146
-England,British,133
-Ethiopia,Ethiopian,149
-European Union,European,38
-Fiji,Fijian,1006
-France,French,45
-Georgia,Georgian,205
-Germany,German,134
-Great Britain,British,133
-Greece,Greek,156
-Guyana,Guyanese,431
-Hungary,Hungarian,228
-India,Indian,148
-Indonesia,Indonesian,114
-Iran,Iranian,140
-Iraq,Iraqi,206
-Ireland,Irish,135
-Israel,Israeli,218
-Italy,Italian,55
-Jamaica,Jamaican,207
-Japan,Japanese,60
-Kazakhstan,Kazakh,208
-Kyrgyzstan,Kyrgyz,946
-Laos,Laotian,901
-Lebanon,Lebanese,66
-Lithuania,Lithuanian,331
-Macau,Chinese,25
-Malaysia,Malaysian,69
-Mauritius,Mauritian,943
-Mexico,Mexican,73
-Moldova,Moldovan,591
-Mongolia,Mongolian,74
-Morocco,Moroccan,147
-Myanmar,Burmese,22
-Nepal,Nepalese,117
-Netherlands,Dutch,204
-New Zealand,New Zealand,961
-Nicaragua,Nicaraguan,962
-Nigeria,Nigerian,296
-Northern Ireland,British,133
-Pakistan,Pakistani,139
-Peru,Peruvian,162
-Philippines,Filipino,112
-Poland,Polish,219
-Portugal,Portuguese,87
-Puerto Rico,Puerto Rican,361
-Romania,Romanian,944
-Russia,Russian,84
-Scotland,Scottish,210
-Singapore,Singaporean,119
-Somalia,Somali,611
-South Africa,South African,267
-Spain,Spanish,89
-Sri Lanka,Sri Lankan,86
-Sweden,Swedish,211
-Switzerland,Swiss,213
-Syria,Syrian,212
-Taiwan,Taiwanese,190
-Tanzania,Tanzanian,621
-Thailand,Thai,95
-Tunisia,Tunisian,761
-Turkey,Turkish,142
-Ukraine,Ukrainian,451
-United Arab Emirates,Emirati,288
-United States,American,1
-United States of America,American,1
-Uruguay,Uruguayan,264
-USA,American,1
-Uzbekistan,Uzbek,771
-Venezuela,Venezuelan,641
-Vietnam,Vietnamese,99
-Wales,Welsh,965
-Yemen,Yemeni,1050
-Zambia,Zambian,949
+afghanistan,afghan,1035
+algeria,algerian,945
+armenia,armenian,175
+australia,australian,131
+austria,austrian,201
+azerbaijan,azerbaijani,581
+bangladesh,bengali,10
+belgium,belgian,132
+brazil,brazilian,159
+britain,british,133
+burma,burmese,22
+cambodia,cambodian,111
+canada,canadian,381
+chile,chilean,229
+china,chinese,25
+colombia,colombian,287
+croatia,croatian,982
+cuba,cuban,153
+cyprus,cypriot,947
+czech republic,czech,671
+denmark,danish,203
+dominica,dominican,958
+dominican republic,dominican,958
+ecuador,ecuadorian,316
+egypt,egyptian,146
+england,british,133
+ethiopia,ethiopian,149
+european union,european,38
+fiji,fijian,1006
+france,french,45
+georgia,georgian,205
+germany,german,134
+great britain,british,133
+greece,greek,156
+guyana,guyanese,431
+hungary,hungarian,228
+india,indian,148
+indonesia,indonesian,114
+iran,iranian,140
+iraq,iraqi,206
+ireland,irish,135
+israel,israeli,218
+italy,italian,55
+jamaica,jamaican,207
+japan,japanese,60
+kazakhstan,kazakh,208
+kyrgyzstan,kyrgyz,946
+laos,laotian,901
+lebanon,lebanese,66
+lithuania,lithuanian,331
+macau,chinese,25
+malaysia,malaysian,69
+mauritius,mauritian,943
+mexico,mexican,73
+moldova,moldovan,591
+mongolia,mongolian,74
+morocco,moroccan,147
+myanmar,burmese,22
+nepal,nepalese,117
+netherlands,dutch,204
+new zealand,new zealand,961
+nicaragua,nicaraguan,962
+nigeria,nigerian,296
+northern ireland,british,133
+pakistan,pakistani,139
+peru,peruvian,162
+philippines,filipino,112
+poland,polish,219
+portugal,portuguese,87
+puerto rico,puerto rican,361
+romania,romanian,944
+russia,russian,84
+scotland,scottish,210
+singapore,singaporean,119
+somalia,somali,611
+south africa,south african,267
+spain,spanish,89
+sri lanka,sri lankan,86
+sweden,swedish,211
+switzerland,swiss,213
+syria,syrian,212
+taiwan,taiwanese,190
+tanzania,tanzanian,621
+thailand,thai,95
+tunisia,tunisian,761
+turkey,turkish,142
+ukraine,ukrainian,451
+united arab emirates,emirati,288
+united states,american,1
+united states of america,american,1
+uruguay,uruguayan,264
+usa,american,1
+uzbekistan,uzbek,771
+venezuela,venezuelan,641
+vietnam,vietnamese,99
+wales,welsh,965
+yemen,yemeni,1050
+zambia,zambian,949
