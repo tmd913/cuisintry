@@ -41,7 +41,6 @@ function displayCountries() {
             console.log(nativeName);
             console.log(response[0].flag);
 
-            
             $("#countries-view").append(flag);
 
         });
