@@ -1,15 +1,14 @@
 let accessToken = '6816158a6fbe7ceacf3a9617a5853775';
 
-$.ajax({
-    // url: 'https://developers.zomato.com/api/v2.1/categories',
-    url: 'https://developers.zomato.com/api/v2.1/cities?q=washington',
-    headers: {
-        'user-key': accessToken,
-    },
-    success: response => {
-        console.log(response);
-    }
-})
+// $.ajax({
+//     url: 'https://developers.zomato.com/api/v2.1/cities?q=washington',
+//     headers: {
+//         'user-key': accessToken,
+//     },
+//     success: response => {
+//         console.log(response);
+//     }
+// })
 
 // var country = "england";
 
@@ -132,13 +131,13 @@ cityIDs.forEach(element => {
     });
 });
 
-$.getJSON("https://api.myjson.com/bins/1cr34k", json => {
+$.getJSON("https://raw.githubusercontent.com/tmd913/project0/tom/assets/country_cuisine_id_lu.json", json => {
     console.log(json);
 });
 
-// $.getJSON("./assets/us_zip_to_lat_long_lu.json", json => {
-//     console.log(json);
-// });
+$.getJSON("https://raw.githubusercontent.com/tmd913/project0/tom/assets/us_zip_to_lat_long_lu.json", json => {
+    console.log(json["20036"]);
+});
 
 
 
