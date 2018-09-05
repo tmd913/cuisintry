@@ -1,0 +1,394 @@
+{
+   "Afghanistan": {
+      "ADJ_FORM": "Afghan",
+      "CUISINE_ID": 1035
+   },
+   "Algeria": {
+      "ADJ_FORM": "Algerian",
+      "CUISINE_ID": 945
+   },
+   "Armenia": {
+      "ADJ_FORM": "Armenian",
+      "CUISINE_ID": 175
+   },
+   "Australia": {
+      "ADJ_FORM": "Australian",
+      "CUISINE_ID": 131
+   },
+   "Austria": {
+      "ADJ_FORM": "Austrian",
+      "CUISINE_ID": 201
+   },
+   "Azerbaijan": {
+      "ADJ_FORM": "Azerbaijani",
+      "CUISINE_ID": 581
+   },
+   "Bangladesh": {
+      "ADJ_FORM": "Bengali",
+      "CUISINE_ID": 10
+   },
+   "Belgium": {
+      "ADJ_FORM": "Belgian",
+      "CUISINE_ID": 132
+   },
+   "Brazil": {
+      "ADJ_FORM": "Brazilian",
+      "CUISINE_ID": 159
+   },
+   "Britain": {
+      "ADJ_FORM": "British",
+      "CUISINE_ID": 133
+   },
+   "Burma": {
+      "ADJ_FORM": "Burmese",
+      "CUISINE_ID": 22
+   },
+   "Cambodia": {
+      "ADJ_FORM": "Cambodian",
+      "CUISINE_ID": 111
+   },
+   "Canada": {
+      "ADJ_FORM": "Canadian",
+      "CUISINE_ID": 381
+   },
+   "Chile": {
+      "ADJ_FORM": "Chilean",
+      "CUISINE_ID": 229
+   },
+   "China": {
+      "ADJ_FORM": "Chinese",
+      "CUISINE_ID": 25
+   },
+   "Colombia": {
+      "ADJ_FORM": "Colombian",
+      "CUISINE_ID": 287
+   },
+   "Croatia": {
+      "ADJ_FORM": "Croatian",
+      "CUISINE_ID": 982
+   },
+   "Cuba": {
+      "ADJ_FORM": "Cuban",
+      "CUISINE_ID": 153
+   },
+   "Cyprus": {
+      "ADJ_FORM": "Cypriot",
+      "CUISINE_ID": 947
+   },
+   "Czech Republic": {
+      "ADJ_FORM": "Czech",
+      "CUISINE_ID": 671
+   },
+   "Denmark": {
+      "ADJ_FORM": "Danish",
+      "CUISINE_ID": 203
+   },
+   "Dominica": {
+      "ADJ_FORM": "Dominican",
+      "CUISINE_ID": 958
+   },
+   "Dominican Republic": {
+      "ADJ_FORM": "Dominican",
+      "CUISINE_ID": 958
+   },
+   "Ecuador": {
+      "ADJ_FORM": "Ecuadorian",
+      "CUISINE_ID": 316
+   },
+   "Egypt": {
+      "ADJ_FORM": "Egyptian",
+      "CUISINE_ID": 146
+   },
+   "England": {
+      "ADJ_FORM": "British",
+      "CUISINE_ID": 133
+   },
+   "Ethiopia": {
+      "ADJ_FORM": "Ethiopian",
+      "CUISINE_ID": 149
+   },
+   "European Union": {
+      "ADJ_FORM": "European",
+      "CUISINE_ID": 38
+   },
+   "Fiji": {
+      "ADJ_FORM": "Fijian",
+      "CUISINE_ID": 1006
+   },
+   "France": {
+      "ADJ_FORM": "French",
+      "CUISINE_ID": 45
+   },
+   "Georgia": {
+      "ADJ_FORM": "Georgian",
+      "CUISINE_ID": 205
+   },
+   "Germany": {
+      "ADJ_FORM": "German",
+      "CUISINE_ID": 134
+   },
+   "Great Britain": {
+      "ADJ_FORM": "British",
+      "CUISINE_ID": 133
+   },
+   "Greece": {
+      "ADJ_FORM": "Greek",
+      "CUISINE_ID": 156
+   },
+   "Guyana": {
+      "ADJ_FORM": "Guyanese",
+      "CUISINE_ID": 431
+   },
+   "Hungary": {
+      "ADJ_FORM": "Hungarian",
+      "CUISINE_ID": 228
+   },
+   "India": {
+      "ADJ_FORM": "Indian",
+      "CUISINE_ID": 148
+   },
+   "Indonesia": {
+      "ADJ_FORM": "Indonesian",
+      "CUISINE_ID": 114
+   },
+   "Iran": {
+      "ADJ_FORM": "Iranian",
+      "CUISINE_ID": 140
+   },
+   "Iraq": {
+      "ADJ_FORM": "Iraqi",
+      "CUISINE_ID": 206
+   },
+   "Ireland": {
+      "ADJ_FORM": "Irish",
+      "CUISINE_ID": 135
+   },
+   "Israel": {
+      "ADJ_FORM": "Israeli",
+      "CUISINE_ID": 218
+   },
+   "Italy": {
+      "ADJ_FORM": "Italian",
+      "CUISINE_ID": 55
+   },
+   "Jamaica": {
+      "ADJ_FORM": "Jamaican",
+      "CUISINE_ID": 207
+   },
+   "Japan": {
+      "ADJ_FORM": "Japanese",
+      "CUISINE_ID": 60
+   },
+   "Kazakhstan": {
+      "ADJ_FORM": "Kazakh",
+      "CUISINE_ID": 208
+   },
+   "Kyrgyzstan": {
+      "ADJ_FORM": "Kyrgyz",
+      "CUISINE_ID": 946
+   },
+   "Laos": {
+      "ADJ_FORM": "Laotian",
+      "CUISINE_ID": 901
+   },
+   "Lebanon": {
+      "ADJ_FORM": "Lebanese",
+      "CUISINE_ID": 66
+   },
+   "Lithuania": {
+      "ADJ_FORM": "Lithuanian",
+      "CUISINE_ID": 331
+   },
+   "Macau": {
+      "ADJ_FORM": "Chinese",
+      "CUISINE_ID": 25
+   },
+   "Malaysia": {
+      "ADJ_FORM": "Malaysian",
+      "CUISINE_ID": 69
+   },
+   "Mauritius": {
+      "ADJ_FORM": "Mauritian",
+      "CUISINE_ID": 943
+   },
+   "Mexico": {
+      "ADJ_FORM": "Mexican",
+      "CUISINE_ID": 73
+   },
+   "Moldova": {
+      "ADJ_FORM": "Moldovan",
+      "CUISINE_ID": 591
+   },
+   "Mongolia": {
+      "ADJ_FORM": "Mongolian",
+      "CUISINE_ID": 74
+   },
+   "Morocco": {
+      "ADJ_FORM": "Moroccan",
+      "CUISINE_ID": 147
+   },
+   "Myanmar": {
+      "ADJ_FORM": "Burmese",
+      "CUISINE_ID": 22
+   },
+   "Nepal": {
+      "ADJ_FORM": "Nepalese",
+      "CUISINE_ID": 117
+   },
+   "Netherlands": {
+      "ADJ_FORM": "Dutch",
+      "CUISINE_ID": 204
+   },
+   "New Zealand": {
+      "ADJ_FORM": "New Zealand",
+      "CUISINE_ID": 961
+   },
+   "Nicaragua": {
+      "ADJ_FORM": "Nicaraguan",
+      "CUISINE_ID": 962
+   },
+   "Nigeria": {
+      "ADJ_FORM": "Nigerian",
+      "CUISINE_ID": 296
+   },
+   "Northern Ireland": {
+      "ADJ_FORM": "British",
+      "CUISINE_ID": 133
+   },
+   "Pakistan": {
+      "ADJ_FORM": "Pakistani",
+      "CUISINE_ID": 139
+   },
+   "Peru": {
+      "ADJ_FORM": "Peruvian",
+      "CUISINE_ID": 162
+   },
+   "Philippines": {
+      "ADJ_FORM": "Filipino",
+      "CUISINE_ID": 112
+   },
+   "Poland": {
+      "ADJ_FORM": "Polish",
+      "CUISINE_ID": 219
+   },
+   "Portugal": {
+      "ADJ_FORM": "Portuguese",
+      "CUISINE_ID": 87
+   },
+   "Puerto Rico": {
+      "ADJ_FORM": "Puerto Rican",
+      "CUISINE_ID": 361
+   },
+   "Romania": {
+      "ADJ_FORM": "Romanian",
+      "CUISINE_ID": 944
+   },
+   "Russia": {
+      "ADJ_FORM": "Russian",
+      "CUISINE_ID": 84
+   },
+   "Scotland": {
+      "ADJ_FORM": "Scottish",
+      "CUISINE_ID": 210
+   },
+   "Singapore": {
+      "ADJ_FORM": "Singaporean",
+      "CUISINE_ID": 119
+   },
+   "Somalia": {
+      "ADJ_FORM": "Somali",
+      "CUISINE_ID": 611
+   },
+   "South Africa": {
+      "ADJ_FORM": "South African",
+      "CUISINE_ID": 267
+   },
+   "Spain": {
+      "ADJ_FORM": "Spanish",
+      "CUISINE_ID": 89
+   },
+   "Sri Lanka": {
+      "ADJ_FORM": "Sri Lankan",
+      "CUISINE_ID": 86
+   },
+   "Sweden": {
+      "ADJ_FORM": "Swedish",
+      "CUISINE_ID": 211
+   },
+   "Switzerland": {
+      "ADJ_FORM": "Swiss",
+      "CUISINE_ID": 213
+   },
+   "Syria": {
+      "ADJ_FORM": "Syrian",
+      "CUISINE_ID": 212
+   },
+   "Taiwan": {
+      "ADJ_FORM": "Taiwanese",
+      "CUISINE_ID": 190
+   },
+   "Tanzania": {
+      "ADJ_FORM": "Tanzanian",
+      "CUISINE_ID": 621
+   },
+   "Thailand": {
+      "ADJ_FORM": "Thai",
+      "CUISINE_ID": 95
+   },
+   "Tunisia": {
+      "ADJ_FORM": "Tunisian",
+      "CUISINE_ID": 761
+   },
+   "Turkey": {
+      "ADJ_FORM": "Turkish",
+      "CUISINE_ID": 142
+   },
+   "Ukraine": {
+      "ADJ_FORM": "Ukrainian",
+      "CUISINE_ID": 451
+   },
+   "United Arab Emirates": {
+      "ADJ_FORM": "Emirati",
+      "CUISINE_ID": 288
+   },
+   "United States": {
+      "ADJ_FORM": "American",
+      "CUISINE_ID": 1
+   },
+   "United States of America": {
+      "ADJ_FORM": "American",
+      "CUISINE_ID": 1
+   },
+   "Uruguay": {
+      "ADJ_FORM": "Uruguayan",
+      "CUISINE_ID": 264
+   },
+   "USA": {
+      "ADJ_FORM": "American",
+      "CUISINE_ID": 1
+   },
+   "Uzbekistan": {
+      "ADJ_FORM": "Uzbek",
+      "CUISINE_ID": 771
+   },
+   "Venezuela": {
+      "ADJ_FORM": "Venezuelan",
+      "CUISINE_ID": 641
+   },
+   "Vietnam": {
+      "ADJ_FORM": "Vietnamese",
+      "CUISINE_ID": 99
+   },
+   "Wales": {
+      "ADJ_FORM": "Welsh",
+      "CUISINE_ID": 965
+   },
+   "Yemen": {
+      "ADJ_FORM": "Yemeni",
+      "CUISINE_ID": 1050
+   },
+   "Zambia": {
+      "ADJ_FORM": "Zambian",
+      "CUISINE_ID": 949
+   }
+}
