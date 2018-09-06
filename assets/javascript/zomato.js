@@ -16,7 +16,7 @@ $(document).ready(function () {
         let cuisineID;
         let lat;
         let lng;
-        $.getJSON("https://raw.githubusercontent.com/tmd913/project0/tom/assets/country_cuisine_id_lu.json", json => {
+        $.getJSON("https://raw.githubusercontent.com/tmd913/project0/master/assets/json/country_cuisine_id_lu.json", json => {
             // console.log(json[country]);
             cuisineID = json[country].CUISINE_ID;
             // console.log(cuisineID);
@@ -34,7 +34,7 @@ $(document).ready(function () {
             // end zip code api for later use
             // ================================
 
-            $.getJSON("https://raw.githubusercontent.com/tmd913/project0/tom/assets/us_zip_to_lat_long_lu.json", json => {
+            $.getJSON("https://raw.githubusercontent.com/tmd913/project0/master/assets/json/us_zip_to_lat_long_lu.json", json => {
                 // console.log(json[zip]);
                 lat = json[zip].LAT;
                 lng = json[zip].LNG;
