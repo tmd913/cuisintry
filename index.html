@@ -11,7 +11,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
+    <!-- https://daneden.github.io/animate.css/ -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/animate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="./assets/javascript/scripts.js"></script>
+    <script type="text/javascript" src="./assets/javascript/zomato.js"></script>
+    <!-- <script type="text/javascript" src="./assets/countries/ghgjhjh.js"></script> -->
 </head>
 
 <body>
@@ -22,29 +29,24 @@
         </div>
     </nav>
 
-    <!-- Parallax Container with Video and Form -->
-    <div class="parallax-container">
-        <div class="valign-wrapper">
-            <div class="row overlay center-align" id="searchArea">
-                <form class="pure-form">
-                    <input type="text" id="countrySearch" class="pure-input-rounded" placeholder="Input Country Name Here">
-                    <input type="text" id="restaurantSearch" class="pure-input-rounded" placeholder="Zip Code">
-                    <a class="waves-effect waves-light btn">Search</a>
-                </form>
-            </div>
-            <div class="parallax">
-                <video autoplay muted loop id="myVideo">
-                    <source src="assets/VideoFootageOfCity.mp4" type="video/mp4">
-                </video>
-            </div>
+    <!-- Container with Video and Form -->
+    <div class="row valign-wrapper" id="videoArea">
+        <video autoplay loop id="video" muted plays-inline>
+            <source src="assets/media/VideoFootageOfCity.mp4" type="video/mp4">
+        </video>
+        <div class="row overlay center-align" id="searchArea">
+            <form class="pure-form">
+                <input type="text" id="countrySearch" class="pure-input-rounded" placeholder="Input Country Name Here">
+                <input type="text" id="restaurantSearch" class="pure-input-rounded" placeholder="Zip Code">
+                <button class="btn waves-effect waves-light" type="submit" name="action" id="Submit" href="#resultsArea">Search</button>
+            </form>
         </div>
     </div>
 
     <!-- Results Area for the Zomato and Country API call -->
-    <div class="row container" id="resultsArea">
 
-        <div class="col s6" id="countryResults">
-            
+    <div class="row container animated display-none" id="resultsArea">
+        <div class="col s8" id="countryResults">
             <div class="flag"></div>
             <div class="name"></div>
             <div class="capital"></div>
@@ -54,19 +56,13 @@
             <div class="nativeName"></div>
             <div class="currencies"></div>
             <div class="languages"></div>
-
+            <div class="picture-container">
+                <div class="pictures"></div>
+            </div>
         </div>
-
-        <div class="col s6" id="restaurantResults">
-            <p>placeholder Results for the Zomato API call here."Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <div class="col s4" id="restaurantResults">
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="./assets/countries/ghgjhjh.js"></script>
 </body>
 
 </html>
