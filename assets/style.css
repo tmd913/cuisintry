@@ -1,16 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+  /*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+    background: #333;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+.brand-logo {
+    padding-left: 10px !important;
+}
 /* Style the video: 100% width and height to cover the entire window */
-#myVideo {
+#video{
+    margin-bottom: 0;
     position: fixed;
-    right: 0;
+    right: 0; 
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
+    width: auto; 
+    height: auto;
+    z-index: -100;
 }
 
 #searchArea {
-    margin-top: 50px;
+    margin-top: 275px;
+    margin-bottom: 275px;
+}
+
+#countrySearch, #restaurantSearch {
+    background:  rgba(107, 106, 106, 0.6);
 }
 
 #resultsArea{
-    
+    background: teal;
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    clear: both;   
+}
+
+#carouselArea {
+    z-index: 100;
+    background: teal;
+    width: 100%;
 }
