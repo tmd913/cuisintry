@@ -8,15 +8,35 @@
 }
 
 #searchArea {
-    margin-top: 50px;
+    margin-top: 150px !important;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* #resultsArea{
-    
-} */
+#resultsArea {
+    margin: 0;
+    /* position: fixed; */
+    /* bottom: 0; */
+    max-width: 100%!important;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 100vh;
+}
 
-#searchArea {
-    margin-top: 200px!important;
+input {
+    color: #000000!important;
+    border: 1px solid #000000!important;
+    box-shadow: inset 0 1px 3px #000000!important;
+}
+
+#searchButton {
+    border: none!important;
+    box-shadow: none!important;
+}
+
+input::placeholder {
+    color: #000000!important;
 }
 
 .picture-container {
@@ -30,4 +50,35 @@
 
 .pictures div a {
     display: block;
+}
+
+.pictures div img {
+    border-radius: 10px;
+}
+
+/* #card-container {
+    width: 45%;
+    display: inline-block;
+} */
+
+#restaurantResults, #countryResults {
+    overflow-y: auto;
+    height: 100vh;
+    padding-top: 15px;
+}
+
+.col .s12::after {
+    margin: 0;
+}
+
+.row::after {
+    margin: 0;
+}
+
+#restaurantResults > .row {
+    margin: 0;
+}
+
+.display-none {
+    display: none;
 }

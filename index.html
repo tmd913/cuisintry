@@ -12,51 +12,10 @@
 
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="/assets/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/style.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <script type="text/javascript" src="scripts.js"></script>
-
-    <style>
-        #searchArea {
-            margin-top: 150px !important;
-            background-color: rgba(255, 255, 255, 0.50);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        input {
-            color: #000000!important;
-            border: 1px solid #000000!important;
-            box-shadow: inset 0 1px 3px #000000!important;
-        }
-
-        #searchButton {
-            border: none!important;
-            box-shadow: none!important;
-        }
-
-        input::placeholder {
-            color: #000000!important;
-        }
-
-        .picture-container {
-            text-align: center;
-        }
-
-        .pictures div {
-            display: inline-block;
-            margin: 10px;
-        }
-
-        .pictures div a {
-            display: block;
-        }
-        
-        .pictures div img {
-            border-radius: 10px;
-        }
-    </style>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script> -->
+    <!-- <script type="text/javascript" src="scripts.js"></script> -->
 </head>
 
 <body>
@@ -74,7 +33,7 @@
                 <form class="pure-form">
                     <input type="text" id="countrySearch" class="pure-input-rounded" placeholder="Input Country Name Here">
                     <input type="text" id="restaurantSearch" class="pure-input-rounded" placeholder="Zip Code">
-                    <input type="submit" value="Search" class="waves-effect waves-light btn" id="searchButton">
+                    <button type="submit" class="waves-effect waves-light btn" id="searchButton">Search</button>
                     <!-- changing to input alters functionality -->
                 </form>
             </div>
@@ -87,15 +46,19 @@
     </div>
 
     <!-- Results Area for the Zomato and Country API call -->
-    <div class="row container" id="resultsArea">
-        <div class="col s6" id="countryResults">
+    <div class="row container display-none" id="resultsArea">
+        <div class="col s7" id="countryResults">
             <p>placeholder Results for the country API call here."Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
                 velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
                 culpa qui officia deserunt mollit anim id est laborum."</p>
+            <!-- <button class="waves-effect waves-light btn" id="searchButton"></button> -->
+            <div class="picture-container">
+                <div class="pictures"></div>
+            </div>
         </div>
-        <div class="col s6" id="restaurantResults">
+        <div class="col s5" id="restaurantResults">
             <p>placeholder Results for the Zomato API call here."Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                 do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
@@ -104,17 +67,8 @@
         </div>
     </div>
 
-    <div class="picture-container">
-        <!-- <form action="submit">
-            <label for="country-name">Enter a country: </label>
-            <input type="text" name="country-name" id="country-name">
-            <input type="submit" id="add-images" value="Add Images">
-        </form> -->
-
-        <div class="pictures"></div>
-    </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="./assets/zomato.js"></script>
 </body>
 
