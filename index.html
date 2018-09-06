@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Project 0</title>
+    <title>cuisin.try</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
         crossorigin="anonymous">
@@ -18,7 +19,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="./assets/javascript/scripts.js"></script>
     <script type="text/javascript" src="./assets/javascript/zomato.js"></script>
-    <!-- <script type="text/javascript" src="./assets/countries/ghgjhjh.js"></script> -->
 </head>
 
 <body>
@@ -36,7 +36,7 @@
         </video>
         <div class="row overlay center-align" id="searchArea">
             <form class="pure-form">
-                <input type="text" id="countrySearch" class="pure-input-rounded" placeholder="Input Country Name Here">
+                <input type="text" id="countrySearch" class="pure-input-rounded" placeholder="Country Name">
                 <input type="text" id="restaurantSearch" class="pure-input-rounded" placeholder="Zip Code">
                 <button class="btn waves-effect waves-light" type="submit" name="action" id="Submit" href="#resultsArea">Search</button>
             </form>
@@ -44,24 +44,32 @@
     </div>
 
     <!-- Results Area for the Zomato and Country API call -->
-
     <div class="row container animated display-none" id="resultsArea">
         <div class="col s8" id="countryResults">
-            <div class="flag"></div>
-            <div class="name"></div>
-            <div class="capital"></div>
-            <div class="region"></div>
-            <div class="subregion"></div>
-            <div class="population"></div>
-            <div class="nativeName"></div>
-            <div class="currencies"></div>
-            <div class="languages"></div>
+            <div class="card horizontal" id="card-container">
+                <div class="card-image"></div>
+                <div class="card-stacked">
+                    <div class="card-content" id="card-content">
+                        <h2 class="header name"></h2>
+                        <p class="capital"></p>
+                        <p class="region"></p>
+                        <p class="subregion"></p>
+                        <p class="population"></p>
+                        <p class="nativeName"></p>
+                        <p class="currencies"></p>
+                        <p class="languages"></p>
+                    </div>
+                    <div class="card-action" id="card-action">
+                        <a id="wiki-link" href="" target="_blank">Wikepedia Page</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="picture-container">
                 <div class="pictures"></div>
             </div>
         </div>
-        <div class="col s4" id="restaurantResults">
-        </div>
+        <div class="col s4" id="restaurantResults"></div>
     </div>
 </body>
 

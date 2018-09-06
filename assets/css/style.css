@@ -1,10 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-  /*  Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections  */
+    /* Background fallback in case of IE8 & down, or in case video doens't load, such as with slower connections */
     background: #333;
     background-attachment: fixed;
     background-size: cover;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
   }
 
 .brand-logo {
@@ -45,6 +47,7 @@ body {
     overflow-y: auto;
     height: 100vh;
     padding-top: 15px;
+    color: #eceff1;
 }
 
 .col .s12::after {
@@ -89,7 +92,44 @@ body {
     height: 100vh;
 }
 
-.flag > img {
-    height: 400px;
-    width: 700px;
+#country-flag {
+    height: 300px!important;
+    width: 100%!important;
+}
+
+#card-container {
+    max-height: 300px;
+    background-color: #009688;
+}
+
+#card-content {
+    max-height: 246px;
+    padding-top: 0!important;
+}
+
+.name {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#countryResults {
+    padding-right: 0;
+    padding-left: 20px;
+}
+
+#Submit {
+    background-color: #009688;
+}
+
+#restaurant-card {
+    background-color: #009688;
+}
+
+.place-link {
+    color: #009688!important;
+    font-size: 16px;
+}
+
+.lp-img-container {
+    width: 275px;
 }
