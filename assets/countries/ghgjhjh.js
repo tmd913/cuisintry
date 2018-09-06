@@ -22,6 +22,7 @@ function displayCountries() {
             console.log(response);
 
             var name = response[0].name;
+            
             var flag = $("<img>").attr("src", response[0].flag);
         
             var nativeName = response[0].nativeName;
@@ -41,7 +42,7 @@ function displayCountries() {
             console.log(nativeName);
             console.log(response[0].flag);
 
-            $("#resultsArea").append(flag);
+            $(".flag").html(flag);
 
         });
     
