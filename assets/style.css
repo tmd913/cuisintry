@@ -14,3 +14,17 @@
 #resultsArea{
     
 }
+
+#countryResults {
+    color: white;
+    width: 50%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+img {
+    height: 400px;
+    width: 700px;
+}
+

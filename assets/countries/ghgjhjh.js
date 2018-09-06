@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $("#country-search").on("click", function (event) {
+    $(".btn").on("click", function (event) {
         event.preventDefault();
         displayCountries();
     });
@@ -9,7 +9,7 @@ $(document).ready(function () {
 
 function displayCountries() {
 
-        var country = $("#country").val().trim();
+        var country = $("#countrySearch").val().trim();
         console.log(country);
         // var country = "dominica";
         var queryURL = "https://restcountries.eu/rest/v2/name/" + country + "?fullText=true";
@@ -27,7 +27,7 @@ function displayCountries() {
             var nativeName = response[0].nativeName;
            
 
-            $("#countries-view").empty();
+            $(".col s6").empty();
 
             $(".name").text("Name: " + response[0].name);
             $(".capital").text("Capital: " + response[0].capital);
@@ -41,7 +41,7 @@ function displayCountries() {
             console.log(nativeName);
             console.log(response[0].flag);
 
-            $("#countries-view").append(flag);
+            $("#resultsArea").append(flag);
 
         });
     
