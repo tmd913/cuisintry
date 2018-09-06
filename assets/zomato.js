@@ -250,22 +250,23 @@ $("#searchButton").on("click", event => {
                             // let restaurantContainer = $('<div class="restaurant-container">').css({ "border": "solid black 1px", "padding": "10px", "margin": "10px" });
                             let restaurantContainer = $(
                                 `<div class="row">
-                                <div class="col s12">
-                                    <div class="card teal darken-1">
-                                        <div class="card-content white-text">
-                                            <span class="card-title">${restaurant.name}</span>
-                                            <p>${restaurant.location.locality}</p>
-                                            <p>${restaurant.location.address}</p>
-                                            <p>${restaurant.user_rating.aggregate_rating} / 5 from ${restaurant.user_rating.votes} user ratings - ${restaurant.user_rating.rating_text}</p>
-                                            <p>Cuisines: ${restaurant.cuisines}</p>
-                                            <p>Average Cost For Two: ${restaurant.currency}${restaurant.average_cost_for_two}</p>
-                                        </div>
-                                        <div class="card-action">
-                                            <a href="${restaurant.url}" target="_blank">Zomato Page</a>
+                                    <div class="col s12">
+                                        <div class="card teal darken-1">
+                                            <div class="card-content white-text">
+                                                <span class="card-title">${restaurant.name}</span>
+                                                <p>${restaurant.location.locality}</p>
+                                                <p>${restaurant.location.address}</p>
+                                                <p>${restaurant.user_rating.aggregate_rating} / 5 from ${restaurant.user_rating.votes} user ratings - ${restaurant.user_rating.rating_text}</p>
+                                                <p>Cuisines: ${restaurant.cuisines}</p>
+                                                <p>Average Cost For Two: ${restaurant.currency}${restaurant.average_cost_for_two}</p>
+                                            </div>
+                                            <div class="card-action">
+                                                <a href="${restaurant.url}" target="_blank">Zomato Page</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>`);
+                                </div>`
+                            );
                             // $(restaurantContainer).append(name);
                             // $(restaurantContainer).append(locality);
                             // $(restaurantContainer).append(address);
