@@ -195,6 +195,7 @@ $(document).ready(function () {
         $("#wiki-link").attr("href", `https://en.wikipedia.org/wiki/${country}`);
         zip = $("#restaurantSearch").val().trim();
         displayCountries();
+        displayLonelyPlanet();
         // JSON that stores cuisine id for each country so we can search the zomato api by cuisine
         $.getJSON("https://raw.githubusercontent.com/tmd913/project0/master/assets/json/country_cuisine_id_lu.json", json => {
             cuisineID = json[country].CUISINE_ID;
@@ -204,10 +205,9 @@ $(document).ready(function () {
             $.getJSON("https://raw.githubusercontent.com/tmd913/project0/master/assets/json/us_zip_to_lat_long_lu.json", json => {
                 lat = json[zip].LAT;
                 lng = json[zip].LNG;
-            });
 
-            displayRestaurants();
-            displayLonelyPlanet();
+                displayRestaurants();
+            });
         });
     })
 });
