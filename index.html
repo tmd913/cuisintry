@@ -25,7 +25,7 @@
     <!--NavBar with Logo -->
     <nav>
         <div class="nav-wrapper teal">
-            <a href="https://github.com/tmd913/project0" class="brand-logo left">Cuisin.try</a>
+            <a href="https://github.com/tmd913/project0" class="brand-logo left">cuisin.try</a>
         </div>
     </nav>
 
@@ -45,31 +45,39 @@
 
     <!-- Results Area for the Zomato and Country API call -->
     <div class="row container animated display-none" id="resultsArea">
-        <div class="col s8" id="countryResults">
-            <div class="card horizontal" id="card-container">
-                <div class="card-image"></div>
-                <div class="card-stacked">
-                    <div class="card-content" id="card-content">
-                        <h2 class="header name"></h2>
-                        <p class="capital"></p>
-                        <p class="region"></p>
-                        <p class="subregion"></p>
-                        <p class="population"></p>
-                        <p class="nativeName"></p>
-                        <p class="currencies"></p>
-                        <p class="languages"></p>
-                    </div>
-                    <div class="card-action" id="card-action">
-                        <a id="wiki-link" href="" target="_blank">Wikipedia Page</a>
+        <div class="col s12 m8" id="countryResults">
+            <div class="row" id="countryAPI">
+                <div class="card horizontal col s12" id="card-container">
+                    <div class="card-image valign-wrapper"></div>
+                    <div class="card-stacked">
+                        <div class="card-content" id="card-content">
+                            <h2 class="header name"></h2>
+                            <p class="capital"></p>
+                            <p class="region"></p>
+                            <p class="subregion"></p>
+                            <p class="population"></p>
+                            <p class="nativeName"></p>
+                            <p class="currencies"></p>
+                            <p class="languages"></p>
+                        </div>
+                        <div class="card-action" id="card-action">
+                            <a id="wiki-link" href="" target="_blank">Wikipedia Page</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Container Area for the Lonely Planet Images -->
-            <div class="picture-container">
-                <div class="pictures"></div>
+
+            <div class="row">
+                <div class="picture-container col s12">
+                    <div class="pictures"></div>
+                </div>
             </div>
         </div>
-        <div class="col s4" id="restaurantResults"></div>
+
+        <div class="col s12 m4" id="restaurantResults">
+            <h2 id="restaurant-header"></h2>
+            <div id="zomato-results"></div>
+        </div>
     </div>
 </body>
 
