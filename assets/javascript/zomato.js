@@ -10,16 +10,6 @@ let lng;
 let page = 1;
 const lonelyPlanetImages = [];
 const ajaxCalls = [];
-let countryJSON;
-let zipJSON;
-// JSON that stores cuisine id for each country so we can search the zomato api by cuisine
-$.getJSON("https://raw.githubusercontent.com/tmd913/project0/master/assets/json/country_cuisine_id_lu.json", json => {
-    countryJSON = json;
-});
-//JSON that converts US zip codes to latitude and longitude so that we can interact with the Zomato API
-$.getJSON("https://raw.githubusercontent.com/tmd913/project0/master/assets/json/us_zip_to_lat_long_lu.json", json => {
-    zipJSON = json;
-});
 
 // calls country api to dynamically display country information
 function displayCountries() {
@@ -205,12 +195,19 @@ $(document).ready(function () {
         $("#wiki-link").attr("href", `https://en.wikipedia.org/wiki/${country}`);
         zip = $("#restaurantSearch").val().trim();
         displayCountries();
-        cuisineID = countryJSON[country].CUISINE_ID;
-        $("#restaurant-header").text(`LOCAL ${countryJSON[country].ADJ_FORM.toUpperCase()} RESTAURANTS`);
-        lat = zipJSON[zip].LAT;
-        lng = zipJSON[zip].LNG;
-        displayLonelyPlanet();
-        displayRestaurants();
+        // JSON that stores cuisine id for each country so we can search the zomato api by cuisine
+        $.getJSON("https://raw.githubusercontent.com/tmd913/project0/master/assets/json/country_cuisine_id_lu.json", json => {
+            cuisineID = json[country].CUISINE_ID;
+            $("#restaurant-header").text(`LOCAL ${json[country].ADJ_FORM.toUpperCase()} RESTAURANTS`);
+
+            //JSON that converts US zip codes to latitude and longitude so that we can interact with the Zomato API
+            $.getJSON("https://raw.githubusercontent.com/tmd913/project0/master/assets/json/us_zip_to_lat_long_lu.json", json => {
+                lat = json[zip].LAT;
+                lng = json[zip].LNG;
+                displayLonelyPlanet();
+                displayRestaurants();
+            });
+        });
     })
 });
 
