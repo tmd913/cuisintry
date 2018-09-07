@@ -11,6 +11,7 @@ let page = 1;
 const lonelyPlanetImages = [];
 const ajaxCalls = [];
 
+// calls country api to dynamically display country information
 function displayCountries() {
     let queryURL = "https://restcountries.eu/rest/v2/name/" + country + "?fullText=true";
 
@@ -32,25 +33,38 @@ function displayCountries() {
     });
 }
 
+// scrapes lonely planet website to dynamically pull back first page of images from countrys places page
 function displayLonelyPlanet() {
     // for (let page = 1; page < 6; page++) {
         $.get(`https://www.lonelyplanet.com/${country}/places?page=${page}`, response => {
+            // finds links to places for specific country
             let placeLink = $(response).find(".card__mask > a");
 
+            // loops through each link element found on places page
             for (const key in placeLink) {
+                // only properties that are not inherited
                 if (placeLink.hasOwnProperty(key)) {
                     const element = placeLink[key];
+                    // limits to elements with valid urls
                     if ($(element).attr("href") != undefined) {
+                        // use to later build full place page link
                         let link = $(element).attr("href")
+                        // adds ajax call to array so that they can later be stopped if taking too long to finish
                         ajaxCalls.push($.get(`https://www.lonelyplanet.com/${link}`, response2 => {
+                            // limits to places with images available
                             if ($(response2).find(".slideshow__slide")[0] != undefined) {
+                                // pulls lonely planet title from place page
                                 let title = $(response2).find(".masthead__title")[0].innerText;
+                                // pulls background image
                                 let slideImg = $(response2).find(".slideshow__slide")[0].style.backgroundImage;
                                 let div = $('<div class="lp-img-container">');
                                 let divLink = $('<div class="lp-link-container">');
+                                // builds full link to place page
                                 divLink.append($("<a>").attr({ "href": `https://www.lonelyplanet.com/${link}`, "target": "_blank", "class": "place-link" }).text(title.toUpperCase()));
                                 div.append(divLink);
+                                // extracts useable url from css string
                                 div.append($("<img>").attr({ "src": slideImg.substring(5, slideImg.length - 2), "height": "162px", "width": "250px" }));
+                                // stores newly created divs in array for potentially limited display arrangements
                                 lonelyPlanetImages.push(div);
                                 $(".pictures").append(div);
                             }
@@ -62,6 +76,7 @@ function displayLonelyPlanet() {
     // }
 }
 
+// calls zomato api to find restaurants with the countrys cuisine near the zip code entered 
 function displayRestaurants() {
     $.ajax({
         url: `https://developers.zomato.com/api/v2.1/search?&lat=${lat}&lon=${lng}&cuisines=${cuisineID}&sort=rating&order=desc`,
@@ -73,6 +88,7 @@ function displayRestaurants() {
                 if (response.restaurants.hasOwnProperty(key)) {
                     const element = response.restaurants[key];
                     let restaurant = element.restaurant;
+                    // create html block for displaying zomato info in materialize cards
                     let restaurantContainer = $(
                         `<div class="row">
                             <div class="col s12">
@@ -99,6 +115,7 @@ function displayRestaurants() {
     })
 }
 
+// removes information prior to populating additional country
 function clearDisplay() {
     $(".card-image").html("");
     $(".name").text("");
@@ -116,6 +133,7 @@ function clearDisplay() {
 $(document).ready(function () {
     $("#Submit").on("click", event => {
         event.preventDefault();
+        // stop lonely planet ajax calls currently in progress
         ajaxCalls.forEach(element => {
             element.abort();
         })
@@ -129,6 +147,7 @@ $(document).ready(function () {
         zip = $("#restaurantSearch").val().trim();
         displayCountries();
         displayLonelyPlanet();
+        // JSON that stores cuisine id for each country so we can search the zomato api by cuisine
         $.getJSON("https://raw.githubusercontent.com/tmd913/project0/master/assets/json/country_cuisine_id_lu.json", json => {
             cuisineID = json[country].CUISINE_ID;
             $("#restaurant-header").text(`LOCAL ${json[country].ADJ_FORM.toUpperCase()} RESTAURANTS`);
