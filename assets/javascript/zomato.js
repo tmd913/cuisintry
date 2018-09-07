@@ -2,10 +2,9 @@
 let accessToken = '1dec11522d7c1a36d57081a995c76d52';
 // let zipAccessToken = 'POxFNCPw1BNNVCYVJdmoM1laaANt2ocOUdhA86z4RcyYea2Eo6hhzQIhaNEyJdlK';
 
+//Function to call RESTcountries api and generate html
 function displayCountries() {
-
     let country = $("#countrySearch").val().trim();
-
     let queryURL = "https://restcountries.eu/rest/v2/name/" + country + "?fullText=true";
 
     $.ajax({
@@ -25,7 +24,7 @@ function displayCountries() {
         $(".languages").text("Languages: " + response[0].languages[0].nativeName);
     });
 }
-
+// Function to add an event to the search button and display to the appropriate div elements.
 $(document).ready(function () {
     $("#Submit").on("click", event => {
         event.preventDefault();
@@ -43,6 +42,8 @@ $(document).ready(function () {
         let lng;
         let page = 1
         displayCountries();
+        
+        //JSON that converts countrys to IDs so we can use the zomato API
         $.getJSON("https://raw.githubusercontent.com/tmd913/project0/master/assets/json/country_cuisine_id_lu.json", json => {
             cuisineID = json[country].CUISINE_ID;
 
@@ -59,6 +60,7 @@ $(document).ready(function () {
             // end zip code api for later use
             // ================================
 
+            //JSON that converts US zip codes to latitude and longitude so that we can interact with the Zomato API
             $.getJSON("https://raw.githubusercontent.com/tmd913/project0/master/assets/json/us_zip_to_lat_long_lu.json", json => {
                 lat = json[zip].LAT;
                 lng = json[zip].LNG;
@@ -66,6 +68,7 @@ $(document).ready(function () {
                 $.get(`https://www.lonelyplanet.com/${country}/places?page=${page}`, response => {
                     let placeLink = $(response).find(".card__mask > a");
 
+                    //Lonely Planet Image Scraper
                     for (const key in placeLink) {
                         if (placeLink.hasOwnProperty(key)) {
                             const element = placeLink[key];
@@ -86,6 +89,7 @@ $(document).ready(function () {
                     }
                 });
 
+                //Ajax call to the Zomato API and display in materialize css card format
                 $.ajax({
                     url: `https://developers.zomato.com/api/v2.1/search?&lat=${lat}&lon=${lng}&cuisines=${cuisineID}&sort=rating&order=desc`,
                     headers: {
