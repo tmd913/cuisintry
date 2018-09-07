@@ -204,10 +204,10 @@ $(document).ready(function () {
             $.getJSON("https://raw.githubusercontent.com/tmd913/project0/master/assets/json/us_zip_to_lat_long_lu.json", json => {
                 lat = json[zip].LAT;
                 lng = json[zip].LNG;
-
-                displayRestaurants();
-                displayLonelyPlanet();
             });
+
+            displayRestaurants();
+            displayLonelyPlanet();
         });
     })
 });
