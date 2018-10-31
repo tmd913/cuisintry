@@ -20,3 +20,6 @@ Cuisin.try is a web-based application linking multiple APIs. Cuisin.try utilizes
 * Sara Anspach https://github.com/sara9551
 * Tom Dennis https://github.com/tmd913
 * Leah Oubouzar https://github.com/loubouzar
+
+![alt text](https://github.com/tmd913/project0/blob/master/assets/media/cuisintry-landing.png?raw=true)
+![alt text](https://github.com/tmd913/project0/blob/master/assets/media/cuisintry-search.png?raw=true)
