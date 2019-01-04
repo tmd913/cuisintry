@@ -14,7 +14,7 @@ Cuisin.try is a web-based application linking multiple APIs. Cuisin.try utilizes
 * https://www.lonelyplanet.com/
 
 ## Link:
-* https://tmd913.github.io/project0/
+* https://tmd913.github.io/cuisintry
 
 ## Authors:
 * Sara Anspach https://github.com/sara9551
